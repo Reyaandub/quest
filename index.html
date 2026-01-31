@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managment.quest – Management for Artists</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="lockScreen" class="lock-screen" role="dialog" aria-labelledby="lockScreenTitle" aria-modal="true">
+        <div class="lock-screen-content">
+            <span class="lock-logo" aria-hidden="true">∞</span>
+            <h1 id="lockScreenTitle" class="lock-screen-title">Enter password for early access</h1>
+            <form id="lockForm" class="lock-form">
+                <input type="password" id="lockPassword" class="lock-input" placeholder="Password" autocomplete="off" aria-label="Password">
+                <p id="lockError" class="lock-error" hidden>Wrong password. Try again.</p>
+                <button type="submit" class="btn btn-pill lock-submit">Enter</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="infinity-logo" aria-hidden="true">∞</span>
+                <span class="logo-text">Managment.quest</span>
+            </a>
+            <nav class="nav">
+                <div class="dropdown" data-dropdown>
+                    <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true">For Artists ▾</button>
+                    <div class="dropdown-menu" hidden>
+                        <a href="#" id="navJoinProgram">Join The Program</a>
+                        <a href="#" id="whatWeOffer">What We Offer</a>
+                    </div>
+                </div>
+                <div class="dropdown" data-dropdown>
+                    <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true">For Producers ▾</button>
+                    <div class="dropdown-menu" hidden>
+                        <a href="#" id="connectionsDatabase">Connections Database</a>
+                        <a href="#" id="howItWorks">How It Works</a>
+                    </div>
+                </div>
+                <div class="dropdown" data-dropdown>
+                    <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+                    <div class="dropdown-menu" hidden>
+                        <a href="mailto:help@managment.quest">Contact</a>
+                        <a href="#">About Us</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="btn btn-pill btn-sm" id="getStartedBtn">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <p class="hero-badge">✨ Private & simple</p>
+            <h1>Artist Management Solutions that actually gets you</h1>
+            <p class="tagline">For artists who want clarity, not corporate vibes. We keep it low-key.</p>
+        </section>
+
+        <section class="about card">
+            <p class="about-text">
+                We do <strong>private, simple management for artists</strong> and run a <strong>local database of connections</strong> for aspiring producers. No fluff, no gatekeeping—just real support for creators.
+            </p>
+        </section>
+
+        <section class="cta">
+            <a href="https://form.typeform.com/to/qyPMjle6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg cta-apply">Apply Now</a>
+            <button type="button" class="btn btn-secondary btn-lg" id="joinProgramBtn">Join The Program</button>
+            <a href="mailto:help@managment.quest" class="btn btn-ghost btn-lg">Learn More</a>
+            <p class="artist-note">Join The Program is for <strong>artists only</strong>.</p>
+        </section>
+
+        <section class="quick-links">
+            <p class="quick-links-label">Quick stuff</p>
+            <div class="button-row">
+                <a href="mailto:help@managment.quest" class="btn btn-ghost">Email us</a>
+                <button type="button" class="btn btn-ghost" id="statusBtn">Status</button>
+            </div>
+        </section>
+
+        <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" hidden>
+            <div class="modal-backdrop" id="modalBackdrop"></div>
+            <div class="modal-content">
+                <h2 id="modalTitle">Program status</h2>
+                <p>The program is currently <strong>closed for artists</strong>. Try again soon, or hit us up at <a href="mailto:help@managment.quest">help@managment.quest</a>.</p>
+                <button type="button" class="btn btn-pill modal-close" id="modalClose">OK, got it</button>
+            </div>
+        </div>
+
+        <div id="statusModal" class="modal status-modal" role="dialog" aria-labelledby="statusTitle" aria-modal="true" hidden>
+            <div class="modal-backdrop" id="statusBackdrop"></div>
+            <div class="modal-content status-content">
+                <h2 id="statusTitle">Status</h2>
+                <p class="status-message">Managment.quest is up and running.</p>
+                <p class="status-message">The service is closing February 15th.</p>
+                <button type="button" class="btn btn-pill modal-close" id="statusClose">OK</button>
+            </div>
+        </div>
+
+        <div id="descriptionModal" class="modal" role="dialog" aria-labelledby="descriptionTitle" aria-modal="true" hidden>
+            <div class="modal-backdrop" id="descriptionBackdrop"></div>
+            <div class="modal-content">
+                <h2 id="descriptionTitle">What we do</h2>
+                <p>We do <strong>private, simple management for artists</strong> and run a <strong>local database of connections</strong> for aspiring producers. No fluff, no gatekeeping—just real support for creators.</p>
+                <button type="button" class="btn btn-pill modal-close" id="descriptionClose">OK</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Managment.quest</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
